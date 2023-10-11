@@ -14,55 +14,6 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "_rewardName",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_loyaltypointsRequired",
-						"type": "uint256"
-					}
-				],
-				"name": "addOrUpdateReward",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "customer",
-						"type": "address"
-					},
-					{
-						"internalType": "int256",
-						"name": "_purchaseamt",
-						"type": "int256"
-					}
-				],
-				"name": "awardLoyaltyPoints",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "checkBalancePoints",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
 						"name": "_accountName",
 						"type": "string"
 					}
@@ -75,22 +26,30 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
+						"internalType": "string",
+						"name": "_merchantName",
+						"type": "string"
 					}
 				],
-				"name": "customerAccounts",
+				"name": "createMerchantAccount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "customers",
 				"outputs": [
 					{
 						"internalType": "string",
-						"name": "accountName",
+						"name": "",
 						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "balancepoints",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -110,18 +69,19 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "merchant",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "merchants",
 				"outputs": [
 					{
 						"internalType": "string",
-						"name": "accountName",
+						"name": "",
 						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "balancepoints",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -157,19 +117,6 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "rewardIndex",
-						"type": "uint256"
-					}
-				],
-				"name": "redeemReward",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
@@ -178,13 +125,8 @@
 				"outputs": [
 					{
 						"internalType": "string",
-						"name": "rewardName",
+						"name": "",
 						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "loyaltypointsRequired",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -204,7 +146,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"loyaltyprg.sol": "LoyaltyProgram"
+			"contracts/Rewardtest.sol": "LoyaltyProgram"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -218,12 +160,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"loyaltyprg.sol": {
-			"keccak256": "0xf3d344e22d1b9a752e167d988d0cf848fbcfe7d3cafdc0f7d875665ea7c4d8ca",
+		"contracts/Rewardtest.sol": {
+			"keccak256": "0x6d703e06287be753c93a0ef687507cb4515360f7e2f9ccb5671ca6992819cf4f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://265b98dfe5024e6fa62762b5117d43da8c3873db4f423336c423f7ad5615c168",
-				"dweb:/ipfs/QmQFpgH5n2MYQFPzbcqVKV3CS35PYqV7UjERefGaqd49Qt"
+				"bzz-raw://9f31e24c66e7d653679c9e665ca2915013ed6d00806013cd8f9dc76e92bfae64",
+				"dweb:/ipfs/QmPu64oUShSWyeQBXzHHMwWSPs6AZJSkzw714WmftWDYnw"
 			]
 		}
 	},
