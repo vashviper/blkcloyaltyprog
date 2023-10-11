@@ -85,6 +85,9 @@ contract LoyaltyProgram {
 
     // Function for customers or merchants to create an account
     function createMerchantAccount(string memory _merchantName) public {
+        MerchantAccountStruct(_merchantName,50,true);
+        merchants.push();
+        
         //require(merchants[msg.sender] == true,"Cant creat account. Account Exists");
         //MerchantAccountStruct storage merchant;
         //merchant = MerchantAccountStruct(_merchantName, 50, true);
