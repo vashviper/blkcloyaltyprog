@@ -6,11 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -37,19 +32,23 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "customers",
+				"inputs": [],
+				"name": "customerCheck",
 				"outputs": [
 					{
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -57,76 +56,22 @@
 			},
 			{
 				"inputs": [],
-				"name": "loyaltypoints",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "merchants",
+				"name": "merchantCheck",
 				"outputs": [
 					{
 						"internalType": "string",
 						"name": "",
 						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "purchaseamt",
-				"outputs": [
+					},
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
+					},
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "rewards",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -161,11 +106,11 @@
 	},
 	"sources": {
 		"contracts/Rewardtest.sol": {
-			"keccak256": "0x5c59e6567b8c0ccdf64f22c3b12ea72306cb636b20bc940766052a6c454adce8",
+			"keccak256": "0x9c1d2c5887c438d237c03a958db0d9ab5e01d54246a392505b43871180ea3064",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f50d1c9a3fce04dac04e4ced0b1507aaebb972adcefd774bca0ccfeb801f2e2d",
-				"dweb:/ipfs/QmZtdyKJSAmFHzoJ3rPbHGJN9rDbaRwok7MowPT5TdmYuT"
+				"bzz-raw://a4aa3d8a3b0d9fe09dbab9577bb84f92449d2515fd675bd63b0d3a7d258b10ba",
+				"dweb:/ipfs/QmbjuXYULg5HYFVvxCZWmG1Q67g85Gzhz8K7u6rec333u4"
 			]
 		}
 	},

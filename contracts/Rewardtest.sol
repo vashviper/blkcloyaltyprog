@@ -2,13 +2,13 @@
 pragma solidity ^0.8.18;
 
 contract LoyaltyProgram {
-    address public owner; // The owner of the loyalty program smart contract
-    uint256 public purchaseamt; // Purchase amount to calculate loyalty points
-    uint256 public loyaltypoints; // Loyalty points earned per purchaseamt
+    //address public owner; // The owner of the loyalty program smart contract
+    //uint256 public purchaseamt; // Purchase amount to calculate loyalty points
+    //uint256 public loyaltypoints; // Loyalty points earned per purchaseamt
 
-    string[] public rewards; // List of available rewards
-    string[] public customers; //list of customers 
-    string[] public merchants; //list of merchants
+    //string[] public rewards; // List of available rewards
+    //string[] public customers; //list of customers 
+    //string[] public merchants; //list of merchants
 
 
 
@@ -31,8 +31,6 @@ contract LoyaltyProgram {
 
 
 
-
-
   
     //mapping(address => CustomerAccount) public customerAccounts; // Mapping of customer accounts
 
@@ -52,7 +50,7 @@ contract LoyaltyProgram {
     }
 */
 
-
+/*
     //set deployer as owner
     constructor() {
         owner = msg.sender;
@@ -62,7 +60,7 @@ contract LoyaltyProgram {
         require(msg.sender == owner, "Only the owner can call this function");
         _;
     }
-
+*/
 
 
 /*
@@ -82,30 +80,29 @@ contract LoyaltyProgram {
         }
     }
 */
-
+MerchantAccountStruct internal merchant;
     // Function for customers or merchants to create an account
     function createMerchantAccount(string memory _merchantName) public {
-        MerchantAccountStruct(_merchantName,50,true);
-        merchants.push();
+        require(merchant.isMerchant==false && customer.isCustomer==false,"Already a merchant or customer");
+        merchant = MerchantAccountStruct(_merchantName,50,true);
         
         //require(merchants[msg.sender] == true,"Cant creat account. Account Exists");
-        //MerchantAccountStruct storage merchant;
-        //merchant = MerchantAccountStruct(_merchantName, 50, true);
-        //merchant.push(MerchantAccountStruct(_merchantName, 50,true));
-        //MerchantAccount[msg.sender] = MerchantAccountStruct(_merchantName, 50,true); // Start with 50 balancepoints
+      //MerchantAccount[msg.sender] = MerchantAccountStruct(_merchantName, 50,true); // Start with 50 balancepoints
+    }
+    function merchantCheck() public view returns(string memory,uint,bool){
+        return (merchant.merchantName, merchant.merchantbalancepoints, merchant.isMerchant);
     }
 
 
-
-
+CustomerAccountStruct internal customer;
     function createCustomerAccount(string memory _accountName) public {        
-        //require(bytes(CustomerAccount[msg.sender].accountName).length == 0,
-         //   "Customer account already exists"
-        //);
-        //CustomerAccountStruct memory customer;
-        //customer = CustomerAccountStruct(_accountName,0,true);
+        require(customer.isCustomer==false && merchant.isMerchant==false,"Already a customer or merchant");
+        customer = CustomerAccountStruct(_accountName,0,true);
     }
 
+    function customerCheck() public view returns (string memory,uint,bool) {
+        return (customer.accountName,customer.customerbalancepoints, customer.isCustomer);
+    }
 
 
 
