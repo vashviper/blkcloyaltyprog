@@ -16,33 +16,42 @@ contract LoyaltyProgram {
         string accountName;
         uint256 balancepoints;
     }
-struct MerchantAccount {
-        string accountName;
+
+    struct MerchantAccount {
+        string merchantName;
         uint256 balancepoints;
-}
+    }
 
 
 
   
     Reward[] public rewards; // List of available rewards
-    CustomerAccount public merchant;
+    CustomerAccount[] public customers;
+    MerchantAccount[] public merchants;
 
 
 
   
-    mapping(address => CustomerAccount) public customerAccounts; // Mapping of customer accounts
+    //mapping(address => CustomerAccount) public customerAccounts; // Mapping of customer accounts
 
+
+
+/*
     constructor() {
         owner = msg.sender;
         purchaseamt = 10; // Default purchase amount (change as needed)
         loyaltypoints = 1; // Default loyalty points (change as needed)
         rewards.push(Reward("Reward 1", 10)); // Default rewards (change as needed)
         rewards.push(Reward("Reward 2", 20));
-        merchant = CustomerAccount("Merchant", 0); // Single merchant
+        merchant = MerchantAccount("Merchant", 0); // Single merchant
 
         // Initialize merchant's account
         customerAccounts[address(this)] = merchant;
     }
+*/
+
+
+
 
     // Modifier to restrict access to the owner
     modifier onlyOwner() {
@@ -50,10 +59,11 @@ struct MerchantAccount {
         _;
     }
 
+
+
+/*
     // Function to add or modify rewards by the owner
-    function addOrUpdateReward(string memory _rewardName, uint256 _loyaltypointsRequired)
-        public
-        onlyOwner
+    function addOrUpdateReward(string memory _rewardName, uint256 _loyaltypointsRequired) public onlyOwner
     {
         bool rewardExists = false;
         for (uint256 i = 0; i < rewards.length; i++) {
@@ -67,21 +77,40 @@ struct MerchantAccount {
             rewards.push(Reward(_rewardName, _loyaltypointsRequired));
         }
     }
+*/
 
-    // Function for customers to create an account
-    function createCustomerAccount(string memory _accountName) public {
-        require(
-            bytes(customerAccounts[msg.sender].accountName).length == 0,
-            "Customer account already exists"
-        );
-        customerAccounts[msg.sender] = CustomerAccount(_accountName, 20); // Start with 20 balancepoints
+
+    // Function for customers or merchants to create an account
+    function createMerchantAccount(string memory _merchantName) public {
+        MerchantAccount[msg.sender] = MerchantAccount(_merchantName, 0); // Start with 20 balancepoints
     }
+
+
+
+
+    function createCustomerAccount(string memory _accountName) public {        
+        //require(
+        //    bytes(CustomerAccount[msg.sender].accountName).length == 0,
+         //   "Customer account already exists"
+        //);
+        CustomerAccount[msg.sender] = CustomerAccount(_accountName, 20); // Start with 20 balancepoints
+    }
+
+
+
+
 
     // Function for customers to check their balancepoints
-    function checkBalancePoints() public view returns (uint256) {
-        return customerAccounts[msg.sender].balancepoints;
+    function checkBalancePointsCustomer() public view returns (uint256) {
+        return CustomerAccount[msg.sender].balancepoints;
     }
 
+    function checkBalancePointsMerchant() public view returns (uint256) {
+        return MerchantAccount[msg.sender].balancepoints;
+    }
+
+
+/*
     // Function for merchants to award loyalty points to a customer
     function awardLoyaltyPoints(address customer, int256 _purchaseamt) public {
         require(_purchaseamt > 0, "Purchase amount must be greater than 0");
@@ -90,6 +119,9 @@ struct MerchantAccount {
         customerAccounts[customer].balancepoints += pointsEarned;
     }
 
+*/
+
+/*
     // Function for customers to redeem rewards
     function redeemReward(uint256 rewardIndex) public {
         require(rewardIndex < rewards.length, "Invalid reward index");
@@ -101,4 +133,5 @@ struct MerchantAccount {
         // Implement reward redemption logic here, e.g., send the reward to the customer
         // This is a simplified example, and you should customize it as per your needs
     }
+    */
 }

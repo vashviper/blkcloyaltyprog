@@ -75,6 +75,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_accountName",
+						"type": "string"
+					}
+				],
+				"name": "createMerchantAccount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
@@ -204,7 +217,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"loyaltyprg.sol": "LoyaltyProgram"
+			"Rewardtest.sol": "LoyaltyProgram"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -218,12 +231,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"loyaltyprg.sol": {
-			"keccak256": "0xf3d344e22d1b9a752e167d988d0cf848fbcfe7d3cafdc0f7d875665ea7c4d8ca",
+		"Rewardtest.sol": {
+			"keccak256": "0x4ebba6fe372785e80e5ff91f43ef1957b1822f1cffe822d66574e2fdfaefbe5e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://265b98dfe5024e6fa62762b5117d43da8c3873db4f423336c423f7ad5615c168",
-				"dweb:/ipfs/QmQFpgH5n2MYQFPzbcqVKV3CS35PYqV7UjERefGaqd49Qt"
+				"bzz-raw://fea1662ac486ab0ea5e6c87ebb69df76262780f61320e7c25b1de89c17e86bca",
+				"dweb:/ipfs/QmZKvGQsYjrQcCfZGnqEdcrnSDTdz4dRoBjSyWiTJTrhvG"
 			]
 		}
 	},
