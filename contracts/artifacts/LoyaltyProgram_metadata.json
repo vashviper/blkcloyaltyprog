@@ -6,48 +6,146 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
 				"inputs": [
 					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "pointsEarned",
+						"type": "uint256"
+					}
+				],
+				"name": "PointsEarned",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "pointsRedeemed",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "rewardId",
+						"type": "uint256"
+					}
+				],
+				"name": "PointsRedeemed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					}
+				],
+				"name": "Registered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "rewardId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "pointsRequired",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
 						"internalType": "string",
-						"name": "_accountName",
+						"name": "rewardName",
 						"type": "string"
 					}
 				],
-				"name": "createCustomerAccount",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
+				"name": "RewardAdded",
+				"type": "event"
 			},
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "rewardId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pointsRequired",
+						"type": "uint256"
+					},
+					{
 						"internalType": "string",
-						"name": "_merchantName",
+						"name": "rewardName",
 						"type": "string"
 					}
 				],
-				"name": "createMerchantAccount",
+				"name": "addReward",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "customerCheck",
+				"name": "checkBalance",
 				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					},
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "customers",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
 					},
 					{
 						"internalType": "bool",
-						"name": "",
+						"name": "isRegistered",
 						"type": "bool"
 					}
 				],
@@ -55,23 +153,84 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "points",
+						"type": "uint256"
+					}
+				],
+				"name": "earnPoints",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "merchantCheck",
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "rewardId",
+						"type": "uint256"
+					}
+				],
+				"name": "redeemPoints",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "register",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "rewardNames",
 				"outputs": [
 					{
 						"internalType": "string",
 						"name": "",
 						"type": "string"
-					},
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					},
+					}
+				],
+				"name": "rewards",
+				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bool"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -91,7 +250,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Rewardtest.sol": "LoyaltyProgram"
+			"contracts/loyaltyprogram2.sol": "LoyaltyProgram"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -105,12 +264,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Rewardtest.sol": {
-			"keccak256": "0x9c1d2c5887c438d237c03a958db0d9ab5e01d54246a392505b43871180ea3064",
+		"contracts/loyaltyprogram2.sol": {
+			"keccak256": "0xee1dbd4ffeb995d8bfb9a50172d90d754bc5cecc8273651db68ae993ce5356be",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a4aa3d8a3b0d9fe09dbab9577bb84f92449d2515fd675bd63b0d3a7d258b10ba",
-				"dweb:/ipfs/QmbjuXYULg5HYFVvxCZWmG1Q67g85Gzhz8K7u6rec333u4"
+				"bzz-raw://ac794ec3a502329c1c7c65d59945eec1fd8609d4a24dd2e6540b1fbf5d1deb8c",
+				"dweb:/ipfs/QmcwFJMJphnbLUKo6jn76VqwMiwYBXCFEHHNBfbQmgB7jN"
 			]
 		}
 	},
