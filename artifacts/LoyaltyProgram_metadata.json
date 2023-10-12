@@ -1,0 +1,231 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_rewardName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_loyaltypointsRequired",
+						"type": "uint256"
+					}
+				],
+				"name": "addOrUpdateReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"internalType": "int256",
+						"name": "_purchaseamt",
+						"type": "int256"
+					}
+				],
+				"name": "awardLoyaltyPoints",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkBalancePoints",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_accountName",
+						"type": "string"
+					}
+				],
+				"name": "createCustomerAccount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "customerAccounts",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "accountName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "balancepoints",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "loyaltypoints",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "merchant",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "accountName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "balancepoints",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "purchaseamt",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "rewardIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "redeemReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "rewards",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "rewardName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loyaltypointsRequired",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"loyaltyprg.sol": "LoyaltyProgram"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"loyaltyprg.sol": {
+			"keccak256": "0xf3d344e22d1b9a752e167d988d0cf848fbcfe7d3cafdc0f7d875665ea7c4d8ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://265b98dfe5024e6fa62762b5117d43da8c3873db4f423336c423f7ad5615c168",
+				"dweb:/ipfs/QmQFpgH5n2MYQFPzbcqVKV3CS35PYqV7UjERefGaqd49Qt"
+			]
+		}
+	},
+	"version": 1
+}
