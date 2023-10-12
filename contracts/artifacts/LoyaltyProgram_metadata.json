@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.18+commit.87f61d96"
+		"version": "0.8.21+commit.d9974bed"
 	},
 	"language": "Solidity",
 	"output": {
@@ -158,6 +158,11 @@
 						"internalType": "uint256",
 						"name": "points",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_customer",
+						"type": "address"
 					}
 				],
 				"name": "earnPoints",
@@ -252,7 +257,7 @@
 		"compilationTarget": {
 			"contracts/loyaltyprogram2.sol": "LoyaltyProgram"
 		},
-		"evmVersion": "paris",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -265,11 +270,11 @@
 	},
 	"sources": {
 		"contracts/loyaltyprogram2.sol": {
-			"keccak256": "0xee1dbd4ffeb995d8bfb9a50172d90d754bc5cecc8273651db68ae993ce5356be",
+			"keccak256": "0x6864ba197b3678bc519338289df3352c8d39833601661d382d54fa5678da13db",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ac794ec3a502329c1c7c65d59945eec1fd8609d4a24dd2e6540b1fbf5d1deb8c",
-				"dweb:/ipfs/QmcwFJMJphnbLUKo6jn76VqwMiwYBXCFEHHNBfbQmgB7jN"
+				"bzz-raw://0c1ea907bf0fdd3707d6bb5d97e667fdb5f2fc27177aff229f43d9b8c69525db",
+				"dweb:/ipfs/QmTY9kBXHatBdvKGgaT2qQ4f15eZ4wjrTwPNXmEZRY1gd9"
 			]
 		}
 	},

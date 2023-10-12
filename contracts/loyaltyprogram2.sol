@@ -33,9 +33,9 @@ contract LoyaltyProgram {
         emit Registered(msg.sender);
     }
     
-    function earnPoints(uint256 points) public {
-        require(customers[msg.sender].isRegistered, "Customer is not registered"); //if customer did not register then points cannot be earned
-        customers[msg.sender].balance += points; // for adding points to balance points
+    function earnPoints(uint256 points, address _customer) public onlyOwner{
+        //require(customers[msg.sender].isRegistered, "Customer is not registered"); //if customer did not register then points cannot be earned
+        customers[_customer].balance += points; // for adding points to balance points
         emit PointsEarned(msg.sender, points);
     }
     
