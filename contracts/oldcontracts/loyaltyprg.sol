@@ -8,7 +8,7 @@ contract LoyaltyProgram {
     uint256 public loyaltypoints; // Loyalty points earned per purchaseamt
 
     struct Reward {
-        string rewardName;
+        string rewardName; 
         uint256 loyaltypointsRequired;
     }
 
