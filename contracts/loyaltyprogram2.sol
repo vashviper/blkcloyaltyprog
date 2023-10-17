@@ -18,8 +18,8 @@ contract LoyaltyProgram {
     event PointsRedeemed(address customer, uint256 pointsRedeemed, uint256 rewardId);
     event RewardAdded(uint256 rewardId, uint256 pointsRequired, string rewardName);
     
-    constructor() {
-        owner = msg.sender;
+    constructor() { // will be called once
+        owner = msg.sender; //assigns msg.sender as owner
     }
     
     modifier onlyOwner() {
