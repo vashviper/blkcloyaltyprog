@@ -4,8 +4,8 @@ const ethers = require('ethers');
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 // Load your Smart Contract
-const contractAddress = 'YOUR_CONTRACT_ADDRESS';
-const contractABI = [/* YOUR ABI HERE */];
+const contractAddress = '0x065e2A50434B1c360CAE4a5616A93C647Df4AD0F';
+const contractABI = [bridge.abi];
 const contract = new ethers.Contract(contractAddress, contractABI, provider);
 
 // Register a customer

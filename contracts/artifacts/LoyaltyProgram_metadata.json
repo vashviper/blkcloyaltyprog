@@ -270,11 +270,11 @@
 	},
 	"sources": {
 		"contracts/loyaltyprogram2.sol": {
-			"keccak256": "0x6864ba197b3678bc519338289df3352c8d39833601661d382d54fa5678da13db",
+			"keccak256": "0x86eb7ab290af6d0097ce7b04dbca348028bd0e91a8de88a5114c6a3fabb49023",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0c1ea907bf0fdd3707d6bb5d97e667fdb5f2fc27177aff229f43d9b8c69525db",
-				"dweb:/ipfs/QmTY9kBXHatBdvKGgaT2qQ4f15eZ4wjrTwPNXmEZRY1gd9"
+				"bzz-raw://1b91a3a7275336f6c15d077be1fedec3c1792582af726d0a2a8ff35b2ce98a68",
+				"dweb:/ipfs/QmbsVz563YvjhBK4sQsUiTZUQxyqwcMZGyNMvqFwahAUcH"
 			]
 		}
 	},
