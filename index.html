@@ -3,73 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loyalty Program</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+    <title>Smart Loyalty Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        div {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+        }
+
+        button, input {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        #rewards {
+            border: none;
+            background-color: transparent;
+        }
+    </style>
 </head>
 <body>
-    <h1>Loyalty Program</h1>
-    <p>Your Ethereum address: <span id="userAddress"></span></p>
-    <p>Your Reward Balance: <span id="rewardBalance"></span></p>
+    <h1>Welcome to the Smart Loyalty Program</h1>
 
-    <button onclick="createUser()">Create User</button>
-    <button onclick="checkBalance()">Check Balance</button>
-    <button onclick="earnReward()">Earn Reward</button>
-    <button onclick="redeemReward()">Redeem Reward</button>
-    <button onclick="transferPoints()">Transfer Points</button>
+    <!-- Registration Section -->
+    <div>
+        <h2>Registration</h2>
+        <button id="registerButton">Register</button>
+    </div>
 
-    <script>
-        // Connect to a web3-enabled browser (like Metamask)
-        if (typeof web3 !== 'undefined') {
-            web3 = new Web3(web3.currentProvider);
-        } else {
-            alert("Please install Metamask or a web3-enabled browser.");
-        }
+    <!-- Earning Points Section -->
+    <div>
+        <h2>Earn Points</h2>
+        <input type="number" id="pointsToEarn" placeholder="Points to Earn">
+        <button id="earnPointsButton">Earn Points</button>
+    </div>
 
-        // Contract address and ABI (replace with your contract's address and ABI)
-        const contractAddress = 'YOUR_CONTRACT_ADDRESS';
-        const contractABI = [...]; // Replace with your contract's ABI
+    <!-- Check Balance Section -->
+    <div>
+        <h2>Check Balance</h2>
+        <button id="checkBalanceButton">Check Balance</button>
+    </div>
 
-        // Initialize the contract instance
-        const contract = new web3.eth.Contract(contractABI, contractAddress);
+    <!-- Redeem Points Section -->
+    <div>
+        <h2>Redeem Points</h2>
+        <input type="number" id="rewardId" placeholder="Reward ID">
+        <button id="redeemPointsButton">Redeem Points</button>
+    </div>
 
-        // User's Ethereum address
-        let userAddress;
+    <!-- Rewards Section (to display available rewards) -->
+    <div id="rewards">
+        <h2>Available Rewards</h2>
+    </div>
 
-        // Function to create a user account
-        async function createUser() {
-            // Get the user's Ethereum address
-            userAddress = await web3.eth.getCoinbase();
-
-            // Create a user account in the contract
-            await contract.methods.createUser().send({ from: userAddress });
-        }
-
-        // Function to check the user's reward balance
-        async function checkBalance() {
-            const balance = await contract.methods.checkBalance().call({ from: userAddress });
-            document.getElementById('rewardBalance').textContent = balance;
-        }
-
-        // Function to earn a reward
-        async function earnReward() {
-            // Implement earning rewards logic here
-        }
-
-        // Function to redeem a reward
-        async function redeemReward() {
-            // Implement redeeming rewards logic here
-        }
-
-        // Function to transfer reward points
-        async function transferPoints() {
-            // Implement transferring points logic here
-        }
-
-        // Display the user's Ethereum address
-        window.addEventListener('load', async () => {
-            userAddress = await web3.eth.getCoinbase();
-            document.getElementById('userAddress').textContent = userAddress;
-        });
-    </script>
+    <script src="script.js"></script> <!-- Include your JavaScript file here -->
 </body>
 </html>
