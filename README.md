@@ -4,25 +4,13 @@ Blockchain Smart Loyalty Program
 <a href="https://vashviper.github.io/blkcloyaltyprog/">Click here to View Blockchain Loyalty Program</a>
 
 # Smart Loyalty Program
-
-Welcome to the Smart Loyalty Program, a decentralized solution that rewards loyal customers with loyalty points, offering a seamless and transparent experience. This program, built on the Ethereum blockchain, allows customers to earn and redeem points, making loyalty rewarding for both businesses and customers.
-
+Introducing our Smart Loyalty Program, a decentralized solution that rewards loyal customers with loyalty points, offering a seamless and transparent experience. This program, built on the Ethereum blockchain, allows customers to earn and redeem points, making loyalty rewarding for both businesses and customers.
 ## Features
 
 Our Smart Loyalty Program offers the following features:
 - **Customer Registration:** Customers can register to start earning and redeeming loyalty points. Registration is quick and hassle-free.
 - **Loyalty Point System:** Earn points with every interaction, purchase, or engagement with our program. These loyalty points can be accumulated and redeemed for a variety of exciting rewards.
 - **Owner Management:** As the contract owner, you have the power to enhance and manage the program. You can add new rewards to keep your customers engaged and excited.
-
-## Getting Started
-
-To get started with our Smart Loyalty Program, follow the steps below:
-1. **Customer Registration:** To become a part of the loyalty program, you'll need to register. This one-time process allows you to start earning and redeeming points. Simply call the `register` function.
-2. **Earn Points:** Interact with our loyalty program to earn points. As a customer, you'll earn points based on your interactions and transactions. The `earnPoints` function allows you to add points to your balance.
-3. **Check Your Balance:** Always stay informed about your point balance. Use the `checkBalance` function to see how many points you've accumulated.
-4. **Redeem Points:** When you're ready to enjoy your rewards, use the `redeemPoints` function to exchange your loyalty points for exciting rewards.
-
-These actions are designed to make your experience rewarding and hassle-free. Start your journey today and explore the benefits of our Smart Loyalty Program!
 
 ## Smart Contract Details
 
@@ -46,13 +34,10 @@ To make the most of our Smart Loyalty Program, here's how you can interact with 
 
 These functions provide the flexibility and power to fully engage with the Smart Loyalty Program.
 
-## License
-
-The Smart Loyalty Program is licensed under [SPDX-License-Identifier](#). You're encouraged to review the license to understand the terms and conditions of using this loyalty program.
 
 ## Contact
 
-If you have any questions, need assistance, or would like to provide feedback, please don't hesitate to reach out. You can contact us at [contact@example.com]. We're here to help you make the most of your Smart Loyalty Program experience.
+If you have any questions, need assistance, or would like to provide feedback, please don't hesitate to reach out. 
 
 Stay loyal, stay rewarded!
 
