@@ -1,7 +1,7 @@
 # blkcloyaltyprog
 Blockchain Smart Loyalty Program
 
-<a href="https://vashviper.github.io/blkcloyaltyprog/">Click here to View Blockchain Loyalty Program</a>
+<a href="https://vashviper.github.io/blkcloyaltyprog/">Click here to view GUI of Smart LoyaltyProgram**WIP**</a>
 
 # Smart Loyalty Program
 Introducing our Smart Loyalty Program, a decentralized solution that rewards loyal customers with loyalty points, offering a seamless and transparent experience. This program, built on the Ethereum blockchain, allows customers to earn and redeem points, making loyalty rewarding for both businesses and customers.
