@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.21+commit.d9974bed"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -255,9 +255,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/loyaltyprogram2.sol": "LoyaltyProgram"
+			"contracts/bkloyaltyprogram2.sol": "LoyaltyProgram"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -269,7 +269,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/loyaltyprogram2.sol": {
+		"contracts/bkloyaltyprogram2.sol": {
 			"keccak256": "0x86eb7ab290af6d0097ce7b04dbca348028bd0e91a8de88a5114c6a3fabb49023",
 			"license": "MIT",
 			"urls": [
